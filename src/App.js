@@ -5,12 +5,10 @@ import { Header, Card, Navbar } from './components/index';
 function App() {
   return (
     <div className='App'>
-      <Navbar></Navbar>
       <header className='App-header'>
         <Logo></Logo>
       </header>
       <Header></Header>
-      <Card></Card>
     </div>
   );
 }
