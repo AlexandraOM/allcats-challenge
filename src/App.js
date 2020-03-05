@@ -4,6 +4,11 @@ import './App.css';
 import { Header, Card, Navbar } from './components/index';
 import getData from './utils/getData';
 import hardCatData from './model/mockCatData';
+import styled from 'styled-components';
+
+const Main = styled.main`
+  background-color: var(--background-colour);
+`;
 
 function App() {
   const [cats, setCats] = React.useState(null);
@@ -22,11 +27,10 @@ function App() {
   return (
     <div className='App'>
       <Navbar></Navbar>
-      {/* <header className='App-header'> */}
-      <Logo></Logo>
-      {/* </header> */}
-      <Header></Header>
-      <Card cats={cats}></Card>
+      <Main>
+        <Header></Header>
+        <Card cats={cats}></Card>
+      </Main>
     </div>
   );
 }
