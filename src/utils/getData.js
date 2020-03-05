@@ -1,7 +1,6 @@
 const getData = async () => {
-  let catData = await fetch(
-    'https://5e5932cd7777050014463360.mockapi.io/cats'
+  return await (
+    await fetch('https://5e5932cd7777050014463360.mockapi.io/cats')
   ).json();
-  console.log(catData);
-  return catData;
 };
+export default getData;
