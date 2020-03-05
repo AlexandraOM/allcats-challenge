@@ -3,5 +3,7 @@ import { render } from '@testing-library/react';
 import Button from './Button';
 
 test('The Button renders', () => {
-  render(<Button></Button>);
+  const { getByText } = render(<Button></Button>);
+  const buttonText = getByText(/button/i);
+  expect(buttonText).toBeInTheDocument();
 });

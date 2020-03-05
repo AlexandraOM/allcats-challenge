@@ -1,6 +1,12 @@
 import React from 'react';
+import Button from './button/Button';
 
-const Header = () => {
-  return <article>Card</article>;
+const Card = () => {
+  return (
+    <article>
+      <h1>Card</h1>
+      <Button></Button>
+    </article>
+  );
 };
-export default Header;
+export default Card;
