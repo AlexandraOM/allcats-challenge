@@ -28,9 +28,12 @@ const Nav = styled.nav`
 const A = styled.a`
   padding: var(--space-xs);
   font-weight: 700;
-  // @media (max-width: 768px) {
-  //   font-weight: 400;
-  // }
+  cursor: pointer;
+  :hover {
+    color: var(--primary-colour);
+    text-decoration: underline;
+    transition: width 0.3s ease 0.5s, left 0.3s ease 0s;
+  }
 `;
 
 const Navbar = () => {
