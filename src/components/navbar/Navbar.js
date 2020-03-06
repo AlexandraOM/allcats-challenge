@@ -3,26 +3,42 @@ import { ReactComponent as Logo } from '../../assets/Allcats_logo.svg';
 import { ReactComponent as Home } from '../../assets/Allcats_home.svg';
 import styled from 'styled-components';
 
-const Top = styled.div`
+const Pages = styled.div`
+  align-self: flex-end;
+  box-sizing: border-box;
+  display: flex;
+  justify-content: flex-end;
+  align-items: flex-end;
+  flex-grow: 2;
+
+  @media (max-width: 768px) {
+    flex-grow: 1;
+  }
+`;
+const Nav = styled.nav`
   box-sizing: border-box;
   width: 100%;
   display: flex;
   justify-content: space-between;
-  align-items: center;
+  align-self: right;
+  padding: var(--space-s);
+`;
+
+const A = styled.a`
   padding: var(--space-xs);
 `;
 
 const Navbar = () => {
   return (
-    <Top>
+    <Nav>
       <Logo></Logo>
-      <nav>
-        <a>Cat Delivery</a>
-        <a>Book a visit</a>
-        <a>Donate</a>
-      </nav>
+      <Pages>
+        <A>Cat Delivery</A>
+        <A>Book a visit</A>
+        <A>Donate</A>
+      </Pages>
       <Home></Home>
-    </Top>
+    </Nav>
   );
 };
 export default Navbar;

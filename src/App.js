@@ -4,9 +4,20 @@ import { Header, Card, Navbar } from './components/index';
 import getData from './utils/getData';
 import hardCatData from './model/mockCatData';
 import styled from 'styled-components';
+// import { H1 } from './components/styled/StyledComponents';
 
 const Main = styled.main`
   background-color: var(--background-colour);
+  box-sizing: border-box;
+  display: flex;
+  flex-flow: row wrap;
+  justify-content: flex-start;
+  width: 100%;
+  padding: 10vh 10vw;
+
+  @media (max-width: 768px) {
+    padding: 0;
+  }
 `;
 
 function App() {

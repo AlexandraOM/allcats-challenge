@@ -31,11 +31,6 @@ const CardSection = styled.section`
   flex-flow: row wrap;
   justify-content: center;
   width: 100%;
-  padding: 0 10vw;
-
-  @media (max-width: 768px) {
-    padding: 0;
-  }
 `;
 
 const ContentContainer = styled.div`
