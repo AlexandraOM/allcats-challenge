@@ -4,11 +4,12 @@ const P = styled.p`
   text-align: start;
   margin: 0;
   padding: var(--space-xs);
+  font-weight: 300;
 `;
 const H1 = styled.h1`
   text-align: start;
   margin: 0;
-  padding: var(--space-xs);
+  padding: var(--space-s);
   width: 100%;
 `;
 

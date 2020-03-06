@@ -14,6 +14,7 @@ const Pages = styled.div`
 
   @media (max-width: 768px) {
     flex-grow: 1;
+    padding: var(--space-xs);
   }
 `;
 const Nav = styled.nav`
@@ -22,7 +23,10 @@ const Nav = styled.nav`
   display: flex;
   justify-content: space-between;
   align-items: center;
-  padding: var(--space-s);
+  padding: var(--space-s) var(--space-xl);
+  @media (max-width: 768px) {
+    padding: var(--space-xs);
+  }
 `;
 
 const A = styled.a`
