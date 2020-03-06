@@ -1,5 +1,4 @@
 import React from 'react';
-import { ReactComponent as Logo } from './assets/Allcats_logo.svg';
 import './App.css';
 import { Header, Card, Navbar } from './components/index';
 import getData from './utils/getData';
