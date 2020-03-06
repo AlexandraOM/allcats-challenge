@@ -9,6 +9,7 @@ const Pages = styled.div`
   display: flex;
   justify-content: flex-end;
   align-items: flex-end;
+  padding: 0 var(--space-m);
   flex-grow: 2;
 
   @media (max-width: 768px) {
@@ -20,12 +21,16 @@ const Nav = styled.nav`
   width: 100%;
   display: flex;
   justify-content: space-between;
-  align-self: right;
+  align-items: center;
   padding: var(--space-s);
 `;
 
 const A = styled.a`
   padding: var(--space-xs);
+  font-weight: 700;
+  // @media (max-width: 768px) {
+  //   font-weight: 400;
+  // }
 `;
 
 const Navbar = () => {
