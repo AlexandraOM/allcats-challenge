@@ -1,6 +1,6 @@
 import React from 'react';
-
+import { H1 } from '../styled/StyledComponents';
 const Header = () => {
-  return <h1>Choose Cats</h1>;
+  return <H1>Choose Cats</H1>;
 };
 export default Header;

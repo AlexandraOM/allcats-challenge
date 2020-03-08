@@ -5,7 +5,6 @@ import styled from 'styled-components';
 import { P, H1 } from '../styled/StyledComponents';
 
 const Article = styled.article`
-  border: 1px solid black;
   width: 20vw;
   max-width: 250px;
   margin: var(--space-s);
@@ -31,11 +30,6 @@ const CardSection = styled.section`
   flex-flow: row wrap;
   justify-content: center;
   width: 100%;
-  padding: 0 10vw;
-
-  @media (max-width: 768px) {
-    padding: 0;
-  }
 `;
 
 const ContentContainer = styled.div`
