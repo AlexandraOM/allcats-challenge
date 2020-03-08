@@ -2,21 +2,8 @@ import React from 'react';
 import { ReactComponent as Logo } from '../../assets/Allcats_logo.svg';
 import { ReactComponent as Home } from '../../assets/Allcats_home.svg';
 import styled from 'styled-components';
+import PageList from './pageList/PageList';
 
-const Pages = styled.div`
-  align-self: flex-end;
-  box-sizing: border-box;
-  display: flex;
-  justify-content: flex-end;
-  align-items: flex-end;
-  padding: 0 var(--space-m);
-  flex-grow: 2;
-
-  @media (max-width: 768px) {
-    flex-grow: 1;
-    padding: var(--space-xs);
-  }
-`;
 const Nav = styled.nav`
   box-sizing: border-box;
   width: 100%;
@@ -29,26 +16,25 @@ const Nav = styled.nav`
   }
 `;
 
-const A = styled.a`
-  padding: var(--space-xs);
-  font-weight: 700;
-  cursor: pointer;
-  :hover {
-    color: var(--primary-colour);
-    text-decoration: underline;
-    transition: width 0.3s ease 0.5s, left 0.3s ease 0s;
-  }
-`;
-
 const Navbar = () => {
+  const [burger, setBurger] = React.useState(false);
+
+  React.useEffect(() => {
+    const handleResize = () => {
+      if (window.innerWidth > 768) {
+        setBurger(false);
+      } else {
+        setBurger(true);
+      }
+    };
+    // listen for when the layout is begin resized
+    window.addEventListener('resize', handleResize);
+  }, []);
+
   return (
     <Nav>
       <Logo></Logo>
-      <Pages>
-        <A>Cat Delivery</A>
-        <A>Book a visit</A>
-        <A>Donate</A>
-      </Pages>
+      <PageList burger={burger}></PageList>
       <Home></Home>
     </Nav>
   );
