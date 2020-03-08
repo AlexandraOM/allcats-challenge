@@ -20,7 +20,6 @@ const Pages = styled.div`
 `;
 
 const PageList = ({ burger }) => {
-  console.log(burger);
   return burger !== true ? (
     <Pages>
       <A>Cat Delivery</A>

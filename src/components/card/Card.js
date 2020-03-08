@@ -45,14 +45,22 @@ const ContentContainer = styled.div`
   align: center;
 `;
 
+const Best = styled(BestTag)`
+  padding: var(--space-xs);
+  transition: background 2s, transform 0.5s;
+  &:hover {
+    transform: rotate(360deg);
+  }
+`;
+
 const Card = ({ cats }) => {
   return (
     <CardSection>
       {cats
         ? cats.map(cat => (
-            <Article>
+            <Article id={cat.id} data-testid={cat.id}>
               <ImageContainer imageUrl={cat.image} alt={cat.name}>
-                {cat.tags[0] === 'best' ? <BestTag></BestTag> : null}
+                {cat.tags[0] === 'best' ? <Best></Best> : null}
               </ImageContainer>
               <ContentContainer>
                 <H1>{cat.name}</H1>

@@ -8,6 +8,10 @@ const TakeHome = styled.button`
   padding: var(--space-s) var(--space-m);
   color: white;
   width: 100%;
+  box-sizing: border-box;
+  :hover {
+    opacity: 0.5;
+  }
 `;
 const Button = () => {
   return <TakeHome>TAKE HOME</TakeHome>;
