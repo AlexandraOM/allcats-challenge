@@ -1,11 +1,14 @@
 import React from 'react';
 import { slide as Menu } from 'react-burger-menu';
-import PageList from '../pageList/PageList';
+import { A } from '../../styled/StyledComponents';
+import './burger.css';
 
 const BurgerMenu = ({ burger }) => {
   return burger ? (
-    <Menu>
-      <PageList></PageList>
+    <Menu isOpen={false} width={'30vw'}>
+      <A>Cat Delivery</A>
+      <A>Book a visit</A>
+      <A>Donate</A>
     </Menu>
   ) : null;
 };

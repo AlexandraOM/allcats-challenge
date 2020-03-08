@@ -1,16 +1,6 @@
 import React from 'react';
 import styled from 'styled-components';
-
-const A = styled.a`
-  padding: var(--space-xs);
-  font-weight: 700;
-  cursor: pointer;
-  :hover {
-    color: var(--primary-colour);
-    text-decoration: underline;
-    transition: width 0.3s ease 0.5s, left 0.3s ease 0s;
-  }
-`;
+import { A } from '../../styled/StyledComponents';
 
 const Pages = styled.div`
   align-self: flex-end;
@@ -22,7 +12,7 @@ const Pages = styled.div`
   flex-grow: 2;
 
   @media (max-width: 768px) {
-    flex-grow: 1;
+    width: 100%
     padding: var(--space-xs);
     flex-direction: column;
     align-items: flex-start;

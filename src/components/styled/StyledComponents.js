@@ -13,4 +13,15 @@ const H1 = styled.h1`
   width: 100%;
 `;
 
-export { P, H1 };
+const A = styled.a`
+  padding: var(--space-xs);
+  font-weight: 700;
+  cursor: pointer;
+  :hover {
+    color: var(--primary-colour);
+    text-decoration: underline;
+    transition: width 0.3s ease 0.5s, left 0.3s ease 0s;
+  }
+`;
+
+export { P, H1, A };
