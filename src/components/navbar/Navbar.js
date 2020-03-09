@@ -17,6 +17,9 @@ const Nav = styled.nav`
   }
 `;
 
+const StyledHome = styled(Home)`
+  cursor: pointer;
+`;
 const Navbar = () => {
   const [burger, setBurger] = React.useState(false);
 
@@ -38,7 +41,7 @@ const Navbar = () => {
       <BurgerMenu burger={burger}></BurgerMenu>
       <Logo></Logo>
       <PageList burger={burger}></PageList>
-      <Home></Home>
+      <StyledHome></StyledHome>
     </Nav>
   );
 };
