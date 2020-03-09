@@ -56,20 +56,22 @@ const Best = styled(BestTag)`
 const Card = ({ cats }) => {
   return (
     <CardSection>
-      {cats
-        ? cats.map(cat => (
-            <Article id={cat.id} data-testid={cat.id}>
-              <ImageContainer imageUrl={cat.image} alt={cat.name}>
-                {cat.tags[0] === 'best' ? <Best></Best> : null}
-              </ImageContainer>
-              <ContentContainer>
-                <H1>{cat.name}</H1>
-                <P>{cat.description}</P>
-              </ContentContainer>
-              <Button></Button>
-            </Article>
-          ))
-        : null}
+      {cats ? (
+        cats.map(cat => (
+          <Article id={cat.id} data-testid={cat.id}>
+            <ImageContainer imageUrl={cat.image} alt={cat.name}>
+              {cat.tags[0] === 'best' ? <Best></Best> : null}
+            </ImageContainer>
+            <ContentContainer>
+              <H1>{cat.name}</H1>
+              <P>{cat.description}</P>
+            </ContentContainer>
+            <Button></Button>
+          </Article>
+        ))
+      ) : (
+        <H1>Loading...</H1>
+      )}
     </CardSection>
   );
 };
